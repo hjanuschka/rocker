@@ -78,7 +78,7 @@ func RegistryListTags(image *imagename.ImageName, auth *docker.AuthConfiguration
 
 	var (
 		tg  = tags{}
-		url = fmt.Sprintf("https://%s/v2/%s/tags/list?page_size=9999&page=1", registry, name)
+		url = fmt.Sprintf("http://%s/v2/%s/tags/list?page_size=9999&page=1", registry, name)
 	)
 
 	log.Debugf("Listing image tags from the remote registry %s", url)
